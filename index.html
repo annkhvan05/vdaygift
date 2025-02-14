@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <link rel="stylesheet" href="style.css?v=4"> <!-- Подключение CSS -->
+</head>
+<body>
+    <div class="card" onclick="flipCard(this)">
+        <p class="front">Нажми, чтобы открыть</p>
+        <p class="back hidden">Любимый, я тебя люблю! 💖</p>
+    </div>
+    <button onclick="nextPage()">Дальше</button>
+
+    <script>
+        function flipCard(card) {
+            card.classList.toggle("flipped");
+            card.querySelector(".front").classList.toggle("hidden");
+            card.querySelector(".back").classList.toggle("hidden");
+        }
+
+        function nextPage() {
+            window.location.href = "reasons.html";
+        }
+    </script>
+</body>
+</html>
